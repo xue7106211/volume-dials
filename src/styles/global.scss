@@ -1,0 +1,48 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --hue: 223;
+  --sat: 10%;
+  --white: hsl(0, 0%, 100%);
+  --light-gray1: hsl(var(--hue), var(--sat), 95%);
+  --light-gray2: hsl(var(--hue), var(--sat), 90%);
+  --light-gray3: hsl(var(--hue), var(--sat), 85%);
+  --light-gray4: hsl(var(--hue), var(--sat), 80%);
+  --dark-gray4: hsl(var(--hue), var(--sat), 30%);
+  --dark-gray5: hsl(var(--hue), var(--sat), 25%);
+  --dark-gray6: hsl(var(--hue), var(--sat), 20%);
+  --dark-gray7: hsl(var(--hue), var(--sat), 15%);
+  --dark-gray8: hsl(var(--hue), var(--sat), 10%);
+  --red: hsl(0, 90%, 60%);
+  --blue: hsl(210, 90%, 60%);
+  --green: hsl(150, 90%, 40%);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+}
+
+button {
+  font: 1em/1.5 sans-serif;
+}
+
+body {
+  background-color: var(--light-gray1);
+  color: var(--dark-gray8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 4em;
+  padding: 0 1.5em;
+  height: 100%;
+}

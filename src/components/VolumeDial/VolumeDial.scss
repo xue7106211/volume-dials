@@ -1,0 +1,102 @@
+.volume {
+  --dot-color: var(--white);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__control {
+    position: relative;
+    width: 10em;
+    height: 10em;
+  }
+  &__dial,
+  &__dial:before,
+  &__dial-wrap {
+    border-radius: 100%;
+    position: absolute;
+  }
+  &__dial {
+    background-color: transparent;
+    cursor: grab;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:before {
+      background-color: var(--dot-color);
+      content: "";
+      display: block;
+      top: 12%;
+      left: 46.5%;
+      width: 7%;
+      height: 7%;
+    }
+    &-label {
+      overflow: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+    }
+    &-wrap {
+      background: {
+        clip:
+          padding-box,
+          border-box;
+        image:
+          radial-gradient(
+            100% 100% at center,
+            var(--light-gray1) 43%,
+            transparent 45%
+          ),
+          linear-gradient(
+            var(--white),
+            var(--light-gray2)
+          );
+        origin: border-box;
+      };
+      border: 0.25em solid transparent;
+      box-shadow: 0 0.5em 1em hsla(0,0%,0%,0.4);
+      inset: 12.5%;
+      width: 75%;
+      height: 75%;
+    }
+  }
+  &__dot {
+    position: absolute;
+    top: 0;
+    left: 49%;
+    width: 2%;
+    height: 50%;
+    transform-origin: 50% 100%;
+
+    &:before {
+      aspect-ratio: 1;
+      background-color: var(--light-gray3);
+      border-radius: 50%;
+      content: "";
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: background-color 0.15s;
+    }
+    &--filled {
+      &:before {
+        background-color: var(--dot-color);
+      }
+    }
+  }
+  &--red {
+    --dot-color: var(--red);
+  }
+  &--green {
+    --dot-color: var(--green);
+  }
+  &--blue {
+    --dot-color: var(--blue);
+  }
+} 
