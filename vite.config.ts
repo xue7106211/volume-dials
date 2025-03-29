@@ -9,15 +9,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'gsap-vendor': ['gsap', '@gsap/react']
-        }
-      }
-    }
+    sourcemap: true
   }
 }) 
